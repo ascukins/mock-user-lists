@@ -1,0 +1,17 @@
+<ng-container *ngIf="loading$ | async; else errorOrData">
+  <app-loading-message/>
+</ng-container>
+
+<ng-template #errorOrData>
+  <ng-container *ngIf="error$ | async as error; else dataContent">
+    <app-error-message [message]="error"></app-error-message>
+  </ng-container>
+
+  <ng-template #dataContent>
+    <app-card-grid>
+      <ng-container *ngFor="let user of users$ | async">
+        <app-reqres-user-card [user]="user"></app-reqres-user-card>
+      </ng-container>
+    </app-card-grid>
+  </ng-template>
+</ng-template>

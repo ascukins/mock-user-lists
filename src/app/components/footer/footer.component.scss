@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: linear-gradient(to left, #f8f8f8, #e0e0e0);
+  padding: 1rem 1rem;
+
+
+  a {
+    margin: 0 1rem;
+    color: inherit;
+    font-size: 2rem;
+
+    &:hover {
+      color: #333;
+    }
+
+    .fa-facebook-f {
+      color: #1877F2;
+    }
+
+    .fa-instagram {
+      color: #C13584;
+    }
+
+    .fa-linkedin-in {
+      color: #0A66C2;
+    }
+  }
+}
