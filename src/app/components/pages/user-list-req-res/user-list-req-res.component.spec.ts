@@ -76,6 +76,7 @@ describe('UserListReqResComponent', () => {
   it('should show error message when error$', () => {
     const errorMessage = 'Error fetching users';
     store.overrideSelector(reqResErrorSelector, errorMessage);
+    store.overrideSelector(reqResLoadingSelector, false);
     store.refreshState();
     fixture.detectChanges();
 
